@@ -40,30 +40,31 @@
             font-weight: bold;
             margin-top: 20px;
         }
-.summary-card {
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    padding: 20px;
-    margin: 20px 0;
-    background-color: #f9f9f9;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
+        .summary-card {
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+            background-color: #f9f9f9;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
 
-.summary-title {
-    font-size: 20px;
-    font-weight: bold;
-    margin-bottom: 10px;
-    color: #333;
-}
+        .summary-title {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #333;
+        }
 
-.summary-content {
-    font-size: 16px;
-    line-height: 1.6;
-    color: #555;
-}
-.wide-input {
-    width: 500px;
-}
+        .summary-content {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #555;
+        }
+
+        .wide-input {
+            width: 500px;
+        }
     </style>
 </head>
 <body>
@@ -71,11 +72,11 @@
     <h1>Weekly Breakdown of SLT and PTG</h1>
 
     <form id="slt-ptg-form">
-<div>
-    <label for="course-info">Course Code and Title:</label>
-    <input type="text" id="course-info" name="course-info" placeholder="Enter course code and title" class="wide-input" required>
-</div>
-<br>
+        <div>
+            <label for="course-info">Course Code and Title:</label>
+            <input type="text" id="course-info" name="course-info" placeholder="Enter course code and title" class="wide-input" required>
+        </div>
+        <br>
         <table>
             <thead>
                 <tr>
@@ -93,638 +94,8 @@
                     <th>Online<br><span style='font-size: 0.8em; font-style: italic; color: gray;'>e.g., Online Quiz</span></th>
                 </tr>
             </thead>
-            <tbody>
-                <!-- Rows for each week -->
-                <tr>
-                    <td class="center">Week 1</td>
-                    <td>
-                        <label>Delivery:</label>
-                        <input type="number" name="week1_materials_onsite_delivery" placeholder="Hours">
-                        <br>
-                        <label>Preparation:</label>
-                        <input type="number" name="week1_materials_onsite_preparation" placeholder="Hours">
-                    </td>
-                    <td>
-                        <label>Delivery:</label>
-                        <input type="number" name="week1_materials_online_delivery" placeholder="Hours">
-                        <br>
-                        <label>Preparation:</label>
-                        <input type="number" name="week1_materials_online_preparation" placeholder="Hours">
-                    </td>
-                    <td>
-                        <label>Delivery:</label>
-                        <input type="number" name="week1_activities_onsite_delivery" placeholder="Hours">
-                        <br>
-                        <label>Preparation:</label>
-                        <input type="number" name="week1_activities_onsite_preparation" placeholder="Hours">
-                    </td>
-                    <td>
-                        <label>Delivery:</label>
-                        <input type="number" name="week1_activities_online_delivery" placeholder="Hours">
-                        <br>
-                        <label>Preparation:</label>
-                        <input type="number" name="week1_activities_online_preparation" placeholder="Hours">
-                    </td>
-                    <td>
-                        <label>Delivery:</label>
-                        <input type="number" name="week1_assessment_onsite_delivery" placeholder="Hours">
-                        <br>
-                        <label>Preparation:</label>
-                        <input type="number" name="week1_assessment_onsite_preparation" placeholder="Hours">
-                    </td>
-                    <td>
-                        <label>Delivery:</label>
-                        <input type="number" name="week1_assessment_online_delivery" placeholder="Hours">
-                        <br>
-                        <label>Preparation:</label>
-                        <input type="number" name="week1_assessment_online_preparation" placeholder="Hours">
-                    </td>
-                </tr>
-                <tr>
-                    <td class="center">Week 2</td>
-                    <td>
-                        <label>Delivery:</label>
-                        <input type="number" name="week2_materials_onsite_delivery" placeholder="Hours">
-                        <br>
-                        <label>Preparation:</label>
-                        <input type="number" name="week2_materials_onsite_preparation" placeholder="Hours">
-                    </td>
-                    <td>
-                        <label>Delivery:</label>
-                        <input type="number" name="week2_materials_online_delivery" placeholder="Hours">
-                        <br>
-                        <label>Preparation:</label>
-                        <input type="number" name="week2_materials_online_preparation" placeholder="Hours">
-                    </td>
-                    <td>
-                        <label>Delivery:</label>
-                        <input type="number" name="week2_activities_onsite_delivery" placeholder="Hours">
-                        <br>
-                        <label>Preparation:</label>
-                        <input type="number" name="week2_activities_onsite_preparation" placeholder="Hours">
-                    </td>
-                    <td>
-                        <label>Delivery:</label>
-                        <input type="number" name="week2_activities_online_delivery" placeholder="Hours">
-                        <br>
-                        <label>Preparation:</label>
-                        <input type="number" name="week2_activities_online_preparation" placeholder="Hours">
-                    </td>
-                    <td>
-                        <label>Delivery:</label>
-                        <input type="number" name="week2_assessment_onsite_delivery" placeholder="Hours">
-                        <br>
-                        <label>Preparation:</label>
-                        <input type="number" name="week2_assessment_onsite_preparation" placeholder="Hours">
-                    </td>
-                    <td>
-                        <label>Delivery:</label>
-                        <input type="number" name="week2_assessment_online_delivery" placeholder="Hours">
-                        <br>
-                        <label>Preparation:</label>
-                        <input type="number" name="week2_assessment_online_preparation" placeholder="Hours">
-                    </td>
-                </tr>
-                <tr>
-                    <td class="center">Week 3</td>
-                    <td>
-                        <label>Delivery:</label>
-                        <input type="number" name="week3_materials_onsite_delivery" placeholder="Hours">
-                        <br>
-                        <label>Preparation:</label>
-                        <input type="number" name="week3_materials_onsite_preparation" placeholder="Hours">
-                    </td>
-                    <td>
-                        <label>Delivery:</label>
-                        <input type="number" name="week3_materials_online_delivery" placeholder="Hours">
-                        <br>
-                        <label>Preparation:</label>
-                        <input type="number" name="week3_materials_online_preparation" placeholder="Hours">
-                    </td>
-                    <td>
-                        <label>Delivery:</label>
-                        <input type="number" name="week3_activities_onsite_delivery" placeholder="Hours">
-                        <br>
-                        <label>Preparation:</label>
-                        <input type="number" name="week3_activities_onsite_preparation" placeholder="Hours">
-                    </td>
-                    <td>
-                        <label>Delivery:</label>
-                        <input type="number" name="week3_activities_online_delivery" placeholder="Hours">
-                        <br>
-                        <label>Preparation:</label>
-                        <input type="number" name="week3_activities_online_preparation" placeholder="Hours">
-                    </td>
-                    <td>
-                        <label>Delivery:</label>
-                        <input type="number" name="week3_assessment_onsite_delivery" placeholder="Hours">
-                        <br>
-                        <label>Preparation:</label>
-                        <input type="number" name="week3_assessment_onsite_preparation" placeholder="Hours">
-                    </td>
-                    <td>
-                        <label>Delivery:</label>
-                        <input type="number" name="week3_assessment_online_delivery" placeholder="Hours">
-                        <br>
-                        <label>Preparation:</label>
-                        <input type="number" name="week3_assessment_online_preparation" placeholder="Hours">
-                    </td>
-                </tr>
-                <tr>
-                    <td class="center">Week 4</td>
-                    <td>
-                        <label>Delivery:</label>
-                        <input type="number" name="week4_materials_onsite_delivery" placeholder="Hours">
-                        <br>
-                        <label>Preparation:</label>
-                        <input type="number" name="week4_materials_onsite_preparation" placeholder="Hours">
-                    </td>
-                    <td>
-                        <label>Delivery:</label>
-                        <input type="number" name="week4_materials_online_delivery" placeholder="Hours">
-                        <br>
-                        <label>Preparation:</label>
-                        <input type="number" name="week4_materials_online_preparation" placeholder="Hours">
-                    </td>
-                    <td>
-                        <label>Delivery:</label>
-                        <input type="number" name="week4_activities_onsite_delivery" placeholder="Hours">
-                        <br>
-                        <label>Preparation:</label>
-                        <input type="number" name="week4_activities_onsite_preparation" placeholder="Hours">
-                    </td>
-                    <td>
-                        <label>Delivery:</label>
-                        <input type="number" name="week4_activities_online_delivery" placeholder="Hours">
-                        <br>
-                        <label>Preparation:</label>
-                        <input type="number" name="week4_activities_online_preparation" placeholder="Hours">
-                    </td>
-                    <td>
-                        <label>Delivery:</label>
-                        <input type="number" name="week4_assessment_onsite_delivery" placeholder="Hours">
-                        <br>
-                        <label>Preparation:</label>
-                        <input type="number" name="week4_assessment_onsite_preparation" placeholder="Hours">
-                    </td>
-                    <td>
-                        <label>Delivery:</label>
-                        <input type="number" name="week4_assessment_online_delivery" placeholder="Hours">
-                        <br>
-                        <label>Preparation:</label>
-                        <input type="number" name="week4_assessment_online_preparation" placeholder="Hours">
-                    </td>
-                </tr>
-                <tr>
-                    <td class="center">Week 5</td>
-                    <td>
-                        <label>Delivery:</label>
-                        <input type="number" name="week5_materials_onsite_delivery" placeholder="Hours">
-                        <br>
-                        <label>Preparation:</label>
-                        <input type="number" name="week5_materials_onsite_preparation" placeholder="Hours">
-                    </td>
-                    <td>
-                        <label>Delivery:</label>
-                        <input type="number" name="week5_materials_online_delivery" placeholder="Hours">
-                        <br>
-                        <label>Preparation:</label>
-                        <input type="number" name="week5_materials_online_preparation" placeholder="Hours">
-                    </td>
-                    <td>
-                        <label>Delivery:</label>
-                        <input type="number" name="week5_activities_onsite_delivery" placeholder="Hours">
-                        <br>
-                        <label>Preparation:</label>
-                        <input type="number" name="week5_activities_onsite_preparation" placeholder="Hours">
-                    </td>
-                    <td>
-                        <label>Delivery:</label>
-                        <input type="number" name="week5_activities_online_delivery" placeholder="Hours">
-                        <br>
-                        <label>Preparation:</label>
-                        <input type="number" name="week5_activities_online_preparation" placeholder="Hours">
-                    </td>
-                    <td>
-                        <label>Delivery:</label>
-                        <input type="number" name="week5_assessment_onsite_delivery" placeholder="Hours">
-                        <br>
-                        <label>Preparation:</label>
-                        <input type="number" name="week5_assessment_onsite_preparation" placeholder="Hours">
-                    </td>
-                    <td>
-                        <label>Delivery:</label>
-                        <input type="number" name="week5_assessment_online_delivery" placeholder="Hours">
-                        <br>
-                        <label>Preparation:</label>
-                        <input type="number" name="week5_assessment_online_preparation" placeholder="Hours">
-                    </td>
-                </tr>
-                <tr>
-                    <td class="center">Week 6</td>
-                    <td>
-                        <label>Delivery:</label>
-                        <input type="number" name="week6_materials_onsite_delivery" placeholder="Hours">
-                        <br>
-                        <label>Preparation:</label>
-                        <input type="number" name="week6_materials_onsite_preparation" placeholder="Hours">
-                    </td>
-                    <td>
-                        <label>Delivery:</label>
-                        <input type="number" name="week6_materials_online_delivery" placeholder="Hours">
-                        <br>
-                        <label>Preparation:</label>
-                        <input type="number" name="week6_materials_online_preparation" placeholder="Hours">
-                    </td>
-                    <td>
-                        <label>Delivery:</label>
-                        <input type="number" name="week6_activities_onsite_delivery" placeholder="Hours">
-                        <br>
-                        <label>Preparation:</label>
-                        <input type="number" name="week6_activities_onsite_preparation" placeholder="Hours">
-                    </td>
-                    <td>
-                        <label>Delivery:</label>
-                        <input type="number" name="week6_activities_online_delivery" placeholder="Hours">
-                        <br>
-                        <label>Preparation:</label>
-                        <input type="number" name="week6_activities_online_preparation" placeholder="Hours">
-                    </td>
-                    <td>
-                        <label>Delivery:</label>
-                        <input type="number" name="week6_assessment_onsite_delivery" placeholder="Hours">
-                        <br>
-                        <label>Preparation:</label>
-                        <input type="number" name="week6_assessment_onsite_preparation" placeholder="Hours">
-                    </td>
-                    <td>
-                        <label>Delivery:</label>
-                        <input type="number" name="week6_assessment_online_delivery" placeholder="Hours">
-                        <br>
-                        <label>Preparation:</label>
-                        <input type="number" name="week6_assessment_online_preparation" placeholder="Hours">
-                    </td>
-                </tr>
-                <tr>
-                    <td class="center">Week 7</td>
-                    <td>
-                        <label>Delivery:</label>
-                        <input type="number" name="week7_materials_onsite_delivery" placeholder="Hours">
-                        <br>
-                        <label>Preparation:</label>
-                        <input type="number" name="week7_materials_onsite_preparation" placeholder="Hours">
-                    </td>
-                    <td>
-                        <label>Delivery:</label>
-                        <input type="number" name="week7_materials_online_delivery" placeholder="Hours">
-                        <br>
-                        <label>Preparation:</label>
-                        <input type="number" name="week7_materials_online_preparation" placeholder="Hours">
-                    </td>
-                    <td>
-                        <label>Delivery:</label>
-                        <input type="number" name="week7_activities_onsite_delivery" placeholder="Hours">
-                        <br>
-                        <label>Preparation:</label>
-                        <input type="number" name="week7_activities_onsite_preparation" placeholder="Hours">
-                    </td>
-                    <td>
-                        <label>Delivery:</label>
-                        <input type="number" name="week7_activities_online_delivery" placeholder="Hours">
-                        <br>
-                        <label>Preparation:</label>
-                        <input type="number" name="week7_activities_online_preparation" placeholder="Hours">
-                    </td>
-                    <td>
-                        <label>Delivery:</label>
-                        <input type="number" name="week7_assessment_onsite_delivery" placeholder="Hours">
-                        <br>
-                        <label>Preparation:</label>
-                        <input type="number" name="week7_assessment_onsite_preparation" placeholder="Hours">
-                    </td>
-                    <td>
-                        <label>Delivery:</label>
-                        <input type="number" name="week7_assessment_online_delivery" placeholder="Hours">
-                        <br>
-                        <label>Preparation:</label>
-                        <input type="number" name="week7_assessment_online_preparation" placeholder="Hours">
-                    </td>
-                </tr>
-                <tr>
-                    <td class="center">Week 8</td>
-                    <td>
-                        <label>Delivery:</label>
-                        <input type="number" name="week8_materials_onsite_delivery" placeholder="Hours">
-                        <br>
-                        <label>Preparation:</label>
-                        <input type="number" name="week8_materials_onsite_preparation" placeholder="Hours">
-                    </td>
-                    <td>
-                        <label>Delivery:</label>
-                        <input type="number" name="week8_materials_online_delivery" placeholder="Hours">
-                        <br>
-                        <label>Preparation:</label>
-                        <input type="number" name="week8_materials_online_preparation" placeholder="Hours">
-                    </td>
-                    <td>
-                        <label>Delivery:</label>
-                        <input type="number" name="week8_activities_onsite_delivery" placeholder="Hours">
-                        <br>
-                        <label>Preparation:</label>
-                        <input type="number" name="week8_activities_onsite_preparation" placeholder="Hours">
-                    </td>
-                    <td>
-                        <label>Delivery:</label>
-                        <input type="number" name="week8_activities_online_delivery" placeholder="Hours">
-                        <br>
-                        <label>Preparation:</label>
-                        <input type="number" name="week8_activities_online_preparation" placeholder="Hours">
-                    </td>
-                    <td>
-                        <label>Delivery:</label>
-                        <input type="number" name="week8_assessment_onsite_delivery" placeholder="Hours">
-                        <br>
-                        <label>Preparation:</label>
-                        <input type="number" name="week8_assessment_onsite_preparation" placeholder="Hours">
-                    </td>
-                    <td>
-                        <label>Delivery:</label>
-                        <input type="number" name="week8_assessment_online_delivery" placeholder="Hours">
-                        <br>
-                        <label>Preparation:</label>
-                        <input type="number" name="week8_assessment_online_preparation" placeholder="Hours">
-                    </td>
-                </tr>
-                <tr>
-                    <td class="center">Week 9</td>
-                    <td>
-                        <label>Delivery:</label>
-                        <input type="number" name="week9_materials_onsite_delivery" placeholder="Hours">
-                        <br>
-                        <label>Preparation:</label>
-                        <input type="number" name="week9_materials_onsite_preparation" placeholder="Hours">
-                    </td>
-                    <td>
-                        <label>Delivery:</label>
-                        <input type="number" name="week9_materials_online_delivery" placeholder="Hours">
-                        <br>
-                        <label>Preparation:</label>
-                        <input type="number" name="week9_materials_online_preparation" placeholder="Hours">
-                    </td>
-                    <td>
-                        <label>Delivery:</label>
-                        <input type="number" name="week9_activities_onsite_delivery" placeholder="Hours">
-                        <br>
-                        <label>Preparation:</label>
-                        <input type="number" name="week9_activities_onsite_preparation" placeholder="Hours">
-                    </td>
-                    <td>
-                        <label>Delivery:</label>
-                        <input type="number" name="week9_activities_online_delivery" placeholder="Hours">
-                        <br>
-                        <label>Preparation:</label>
-                        <input type="number" name="week9_activities_online_preparation" placeholder="Hours">
-                    </td>
-                    <td>
-                        <label>Delivery:</label>
-                        <input type="number" name="week9_assessment_onsite_delivery" placeholder="Hours">
-                        <br>
-                        <label>Preparation:</label>
-                        <input type="number" name="week9_assessment_onsite_preparation" placeholder="Hours">
-                    </td>
-                    <td>
-                        <label>Delivery:</label>
-                        <input type="number" name="week9_assessment_online_delivery" placeholder="Hours">
-                        <br>
-                        <label>Preparation:</label>
-                        <input type="number" name="week9_assessment_online_preparation" placeholder="Hours">
-                    </td>
-                </tr>
-                <tr>
-                    <td class="center">Week 6</td>
-                    <td>
-                        <label>Delivery:</label>
-                        <input type="number" name="week10_materials_onsite_delivery" placeholder="Hours">
-                        <br>
-                        <label>Preparation:</label>
-                        <input type="number" name="week10_materials_onsite_preparation" placeholder="Hours">
-                    </td>
-                    <td>
-                        <label>Delivery:</label>
-                        <input type="number" name="week10_materials_online_delivery" placeholder="Hours">
-                        <br>
-                        <label>Preparation:</label>
-                        <input type="number" name="week10_materials_online_preparation" placeholder="Hours">
-                    </td>
-                    <td>
-                        <label>Delivery:</label>
-                        <input type="number" name="week10_activities_onsite_delivery" placeholder="Hours">
-                        <br>
-                        <label>Preparation:</label>
-                        <input type="number" name="week10_activities_onsite_preparation" placeholder="Hours">
-                    </td>
-                    <td>
-                        <label>Delivery:</label>
-                        <input type="number" name="week10_activities_online_delivery" placeholder="Hours">
-                        <br>
-                        <label>Preparation:</label>
-                        <input type="number" name="week10_activities_online_preparation" placeholder="Hours">
-                    </td>
-                    <td>
-                        <label>Delivery:</label>
-                        <input type="number" name="week10_assessment_onsite_delivery" placeholder="Hours">
-                        <br>
-                        <label>Preparation:</label>
-                        <input type="number" name="week10_assessment_onsite_preparation" placeholder="Hours">
-                    </td>
-                    <td>
-                        <label>Delivery:</label>
-                        <input type="number" name="week10_assessment_online_delivery" placeholder="Hours">
-                        <br>
-                        <label>Preparation:</label>
-                        <input type="number" name="week10_assessment_online_preparation" placeholder="Hours">
-                    </td>
-                </tr>
-                <tr>
-                    <td class="center">Week 11</td>
-                    <td>
-                        <label>Delivery:</label>
-                        <input type="number" name="week11_materials_onsite_delivery" placeholder="Hours">
-                        <br>
-                        <label>Preparation:</label>
-                        <input type="number" name="week11_materials_onsite_preparation" placeholder="Hours">
-                    </td>
-                    <td>
-                        <label>Delivery:</label>
-                        <input type="number" name="week11_materials_online_delivery" placeholder="Hours">
-                        <br>
-                        <label>Preparation:</label>
-                        <input type="number" name="week11_materials_online_preparation" placeholder="Hours">
-                    </td>
-                    <td>
-                        <label>Delivery:</label>
-                        <input type="number" name="week11_activities_onsite_delivery" placeholder="Hours">
-                        <br>
-                        <label>Preparation:</label>
-                        <input type="number" name="week11_activities_onsite_preparation" placeholder="Hours">
-                    </td>
-                    <td>
-                        <label>Delivery:</label>
-                        <input type="number" name="week11_activities_online_delivery" placeholder="Hours">
-                        <br>
-                        <label>Preparation:</label>
-                        <input type="number" name="week11_activities_online_preparation" placeholder="Hours">
-                    </td>
-                    <td>
-                        <label>Delivery:</label>
-                        <input type="number" name="week11_assessment_onsite_delivery" placeholder="Hours">
-                        <br>
-                        <label>Preparation:</label>
-                        <input type="number" name="week11_assessment_onsite_preparation" placeholder="Hours">
-                    </td>
-                    <td>
-                        <label>Delivery:</label>
-                        <input type="number" name="week11_assessment_online_delivery" placeholder="Hours">
-                        <br>
-                        <label>Preparation:</label>
-                        <input type="number" name="week11_assessment_online_preparation" placeholder="Hours">
-                    </td>
-                </tr>
-                <tr>
-                    <td class="center">Week 12</td>
-                    <td>
-                        <label>Delivery:</label>
-                        <input type="number" name="week12_materials_onsite_delivery" placeholder="Hours">
-                        <br>
-                        <label>Preparation:</label>
-                        <input type="number" name="week12_materials_onsite_preparation" placeholder="Hours">
-                    </td>
-                    <td>
-                        <label>Delivery:</label>
-                        <input type="number" name="week12_materials_online_delivery" placeholder="Hours">
-                        <br>
-                        <label>Preparation:</label>
-                        <input type="number" name="week12_materials_online_preparation" placeholder="Hours">
-                    </td>
-                    <td>
-                        <label>Delivery:</label>
-                        <input type="number" name="week12_activities_onsite_delivery" placeholder="Hours">
-                        <br>
-                        <label>Preparation:</label>
-                        <input type="number" name="week12_activities_onsite_preparation" placeholder="Hours">
-                    </td>
-                    <td>
-                        <label>Delivery:</label>
-                        <input type="number" name="week12_activities_online_delivery" placeholder="Hours">
-                        <br>
-                        <label>Preparation:</label>
-                        <input type="number" name="week12_activities_online_preparation" placeholder="Hours">
-                    </td>
-                    <td>
-                        <label>Delivery:</label>
-                        <input type="number" name="week12_assessment_onsite_delivery" placeholder="Hours">
-                        <br>
-                        <label>Preparation:</label>
-                        <input type="number" name="week12_assessment_onsite_preparation" placeholder="Hours">
-                    </td>
-                    <td>
-                        <label>Delivery:</label>
-                        <input type="number" name="week12_assessment_online_delivery" placeholder="Hours">
-                        <br>
-                        <label>Preparation:</label>
-                        <input type="number" name="week12_assessment_online_preparation" placeholder="Hours">
-                    </td>
-                </tr>
-                <tr>
-                    <td class="center">Week 13</td>
-                    <td>
-                        <label>Delivery:</label>
-                        <input type="number" name="week13_materials_onsite_delivery" placeholder="Hours">
-                        <br>
-                        <label>Preparation:</label>
-                        <input type="number" name="week13_materials_onsite_preparation" placeholder="Hours">
-                    </td>
-                    <td>
-                        <label>Delivery:</label>
-                        <input type="number" name="week13_materials_online_delivery" placeholder="Hours">
-                        <br>
-                        <label>Preparation:</label>
-                        <input type="number" name="week13_materials_online_preparation" placeholder="Hours">
-                    </td>
-                    <td>
-                        <label>Delivery:</label>
-                        <input type="number" name="week13_activities_onsite_delivery" placeholder="Hours">
-                        <br>
-                        <label>Preparation:</label>
-                        <input type="number" name="week13_activities_onsite_preparation" placeholder="Hours">
-                    </td>
-                    <td>
-                        <label>Delivery:</label>
-                        <input type="number" name="week13_activities_online_delivery" placeholder="Hours">
-                        <br>
-                        <label>Preparation:</label>
-                        <input type="number" name="week13_activities_online_preparation" placeholder="Hours">
-                    </td>
-                    <td>
-                        <label>Delivery:</label>
-                        <input type="number" name="week13_assessment_onsite_delivery" placeholder="Hours">
-                        <br>
-                        <label>Preparation:</label>
-                        <input type="number" name="week13_assessment_onsite_preparation" placeholder="Hours">
-                    </td>
-                    <td>
-                        <label>Delivery:</label>
-                        <input type="number" name="week13_assessment_online_delivery" placeholder="Hours">
-                        <br>
-                        <label>Preparation:</label>
-                        <input type="number" name="week13_assessment_online_preparation" placeholder="Hours">
-                    </td>
-                </tr>
-                <tr>
-                    <td class="center">Week 14</td>
-                    <td>
-                        <label>Delivery:</label>
-                        <input type="number" name="week14_materials_onsite_delivery" placeholder="Hours">
-                        <br>
-                        <label>Preparation:</label>
-                        <input type="number" name="week14_materials_onsite_preparation" placeholder="Hours">
-                    </td>
-                    <td>
-                        <label>Delivery:</label>
-                        <input type="number" name="week14_materials_online_delivery" placeholder="Hours">
-                        <br>
-                        <label>Preparation:</label>
-                        <input type="number" name="week14_materials_online_preparation" placeholder="Hours">
-                    </td>
-                    <td>
-                        <label>Delivery:</label>
-                        <input type="number" name="week14_activities_onsite_delivery" placeholder="Hours">
-                        <br>
-                        <label>Preparation:</label>
-                        <input type="number" name="week14_activities_onsite_preparation" placeholder="Hours">
-                    </td>
-                    <td>
-                        <label>Delivery:</label>
-                        <input type="number" name="week14_activities_online_delivery" placeholder="Hours">
-                        <br>
-                        <label>Preparation:</label>
-                        <input type="number" name="week14_activities_online_preparation" placeholder="Hours">
-                    </td>
-                    <td>
-                        <label>Delivery:</label>
-                        <input type="number" name="week14_assessment_onsite_delivery" placeholder="Hours">
-                        <br>
-                        <label>Preparation:</label>
-                        <input type="number" name="week14_assessment_onsite_preparation" placeholder="Hours">
-                    </td>
-                    <td>
-                        <label>Delivery:</label>
-                        <input type="number" name="week14_assessment_online_delivery" placeholder="Hours">
-                        <br>
-                        <label>Preparation:</label>
-                        <input type="number" name="week14_assessment_online_preparation" placeholder="Hours">
-                    </td>
-                </tr>
+            <tbody id="week-rows">
+                <!-- Week rows will be dynamically inserted here -->
                 <tr>
                     <td class="center">Exam Week</td>
                     <td>
@@ -811,6 +182,58 @@
     <div id="totals" class="totals"></div>
 
     <script>
+        // Dynamically add rows for weeks 1 to 14
+        const weekRows = document.getElementById('week-rows');
+        for (let week = 1; week <= 14; week++) {
+            const row = document.createElement('tr');
+            row.innerHTML = `
+                <td class="center">Week ${week}</td>
+                <td>
+                    <label>Delivery:</label>
+                    <input type="number" name="week${week}_materials_onsite_delivery" placeholder="Hours">
+                    <br>
+                    <label>Preparation:</label>
+                    <input type="number" name="week${week}_materials_onsite_preparation" placeholder="Hours">
+                </td>
+                <td>
+                    <label>Delivery:</label>
+                    <input type="number" name="week${week}_materials_online_delivery" placeholder="Hours">
+                    <br>
+                    <label>Preparation:</label>
+                    <input type="number" name="week${week}_materials_online_preparation" placeholder="Hours">
+                </td>
+                <td>
+                    <label>Delivery:</label>
+                    <input type="number" name="week${week}_activities_onsite_delivery" placeholder="Hours">
+                    <br>
+                    <label>Preparation:</label>
+                    <input type="number" name="week${week}_activities_onsite_preparation" placeholder="Hours">
+                </td>
+                <td>
+                    <label>Delivery:</label>
+                    <input type="number" name="week${week}_activities_online_delivery" placeholder="Hours">
+                    <br>
+                    <label>Preparation:</label>
+                    <input type="number" name="week${week}_activities_online_preparation" placeholder="Hours">
+                </td>
+                <td>
+                    <label>Delivery:</label>
+                    <input type="number" name="week${week}_assessment_onsite_delivery" placeholder="Hours">
+                    <br>
+                    <label>Preparation:</label>
+                    <input type="number" name="week${week}_assessment_onsite_preparation" placeholder="Hours">
+                </td>
+                <td>
+                    <label>Delivery:</label>
+                    <input type="number" name="week${week}_assessment_online_delivery" placeholder="Hours">
+                    <br>
+                    <label>Preparation:</label>
+                    <input type="number" name="week${week}_assessment_online_preparation" placeholder="Hours">
+                </td>
+            `;
+            weekRows.insertBefore(row, weekRows.lastElementChild);
+        }
+
         document.getElementById('slt-ptg-form').addEventListener('submit', function(event) {
             event.preventDefault();
 
@@ -818,23 +241,61 @@
 
             let onsiteMaterials = 0, onsiteActivities = 0, onsiteAssessments = 0;
             let onlineMaterials = 0, onlineActivities = 0, onlineAssessments = 0;
-            let onsiteExam = 0, onlineExam = 0;
 
+            // Loop through weeks and calculate totals
             for (let week = 1; week <= 14; week++) {
-                onsiteMaterials += parseInt(formData.get(`week${week}_materials_onsite_delivery`) || '0') + parseInt(formData.get(`week${week}_materials_onsite_preparation`) || '0');
-                onlineMaterials += parseInt(formData.get(`week${week}_materials_online_delivery`) || '0') + parseInt(formData.get(`week${week}_materials_online_preparation`) || '0');
+                const weekKey = `week${week}`;
 
-                onsiteActivities += parseInt(formData.get(`week${week}_activities_onsite_delivery`) || '0') + parseInt(formData.get(`week${week}_activities_onsite_preparation`) || '0');
-                onlineActivities += parseInt(formData.get(`week${week}_activities_online_delivery`) || '0') + parseInt(formData.get(`week${week}_activities_online_preparation`) || '0');
+                onsiteMaterials += parseInt(formData.get(`${weekKey}_materials_onsite_delivery`) || 0) +
+                                   parseInt(formData.get(`${weekKey}_materials_onsite_preparation`) || 0);
+                onlineMaterials += parseInt(formData.get(`${weekKey}_materials_online_delivery`) || 0) +
+                                   parseInt(formData.get(`${weekKey}_materials_online_preparation`) || 0);
 
-                onsiteAssessments += parseInt(formData.get(`week${week}_assessment_onsite_delivery`) || '0') + parseInt(formData.get(`week${week}_assessment_onsite_preparation`) || '0');
-                onlineAssessments += parseInt(formData.get(`week${week}_assessment_online_delivery`) || '0') + parseInt(formData.get(`week${week}_assessment_online_preparation`) || '0');
+                onsiteActivities += parseInt(formData.get(`${weekKey}_activities_onsite_delivery`) || 0) +
+                                    parseInt(formData.get(`${weekKey}_activities_onsite_preparation`) || 0);
+                onlineActivities += parseInt(formData.get(`${weekKey}_activities_online_delivery`) || 0) +
+                                    parseInt(formData.get(`${weekKey}_activities_online_preparation`) || 0);
+
+                onsiteAssessments += parseInt(formData.get(`${weekKey}_assessment_onsite_delivery`) || 0) +
+                                     parseInt(formData.get(`${weekKey}_assessment_onsite_preparation`) || 0);
+                onlineAssessments += parseInt(formData.get(`${weekKey}_assessment_online_delivery`) || 0) +
+                                     parseInt(formData.get(`${weekKey}_assessment_online_preparation`) || 0);
             }
 
+            // Include Exam Week manually
+            onsiteMaterials += parseInt(formData.get('examweek_materials_onsite_delivery') || 0) +
+                               parseInt(formData.get('examweek_materials_onsite_preparation') || 0);
+            onlineMaterials += parseInt(formData.get('examweek_materials_online_delivery') || 0) +
+                               parseInt(formData.get('examweek_materials_online_preparation') || 0);
+
+            onsiteActivities += parseInt(formData.get('examweek_activities_onsite_delivery') || 0) +
+                                parseInt(formData.get('examweek_activities_onsite_preparation') || 0);
+            onlineActivities += parseInt(formData.get('examweek_activities_online_delivery') || 0) +
+                                parseInt(formData.get('examweek_activities_online_preparation') || 0);
+
+            onsiteAssessments += parseInt(formData.get('examweek_assessment_onsite_delivery') || 0) +
+                                 parseInt(formData.get('examweek_assessment_onsite_preparation') || 0);
+            onlineAssessments += parseInt(formData.get('examweek_assessment_online_delivery') || 0) +
+                                 parseInt(formData.get('examweek_assessment_online_preparation') || 0);
+
+            // Calculate totals
             const totalMaterials = onsiteMaterials + onlineMaterials;
             const totalActivities = onsiteActivities + onlineActivities;
             const totalAssessments = onsiteAssessments + onlineAssessments;
 
+            const totalSLT = totalMaterials + totalActivities + totalAssessments;
+            const totalPTG = onlineMaterials + onlineActivities + onlineAssessments;
+
+            // Calculate percentages safely
+            const ptgPercentage = totalSLT > 0 ? ((totalPTG / totalSLT) * 100).toFixed(2) : 0;
+            const onlineMaterialsPercentage = totalPTG > 0 ? ((onlineMaterials / totalPTG) * 100).toFixed(2) : 0;
+            const onlineActivitiesPercentage = totalPTG > 0 ? ((onlineActivities / totalPTG) * 100).toFixed(2) : 0;
+            const onlineAssessmentsPercentage = totalPTG > 0 ? ((onlineAssessments / totalPTG) * 100).toFixed(2) : 0;
+
+            // Get course info
+            const courseInfo = formData.get('course-info') || "Not Provided";
+
+            // Update table with calculated values
             document.getElementById('onsite-materials').textContent = onsiteMaterials;
             document.getElementById('online-materials').textContent = onlineMaterials;
             document.getElementById('total-materials').textContent = totalMaterials;
@@ -847,30 +308,21 @@
             document.getElementById('online-assessments').textContent = onlineAssessments;
             document.getElementById('total-assessments').textContent = totalAssessments;
 
-            const totalSLT = totalMaterials + totalActivities + totalAssessments;
-            const totalPTG = onlineMaterials + onlineActivities + onlineAssessments;
-
-            const ptgPercentage = ((totalPTG / totalSLT) * 100).toFixed(2);
-            const onlineMaterialsPercentage = ((onlineMaterials / totalPTG) * 100).toFixed(2);
-            const onlineActivitiesPercentage = ((onlineActivities / totalPTG) * 100).toFixed(2);
-            const onlineAssessmentsPercentage = ((onlineAssessments / totalPTG) * 100).toFixed(2);
-
-            const courseInfo = formData.get('course-info');
-
-document.getElementById('totals').innerHTML = `
-    <div class="summary-card">
-        <div class="summary-title">Course Overview</div>
-        <div class="summary-content">
-            <strong>Course Code and Title:</strong> ${courseInfo}<br><br>
-            <strong>Total SLT:</strong> ${totalSLT} hours<br>
-            <strong>Total PTG:</strong> ${totalPTG} hours<br>
-            <strong>% PTG:</strong> ${ptgPercentage}%<br>
-            <strong>% Online Learning Materials:</strong> ${onlineMaterialsPercentage}%<br>
-            <strong>% Online Learning Activities:</strong> ${onlineActivitiesPercentage}%<br>
-            <strong>% Online Assessments:</strong> ${onlineAssessmentsPercentage}%
-        </div>
-    </div>
-`;
+            // Display summary
+            document.getElementById('totals').innerHTML = `
+                <div class="summary-card">
+                    <div class="summary-title">Course Overview</div>
+                    <div class="summary-content">
+                        <strong>Course Code and Title:</strong> ${courseInfo}<br><br>
+                        <strong>Total SLT:</strong> ${totalSLT} hours<br>
+                        <strong>Total PTG:</strong> ${totalPTG} hours<br>
+                        <strong>% PTG:</strong> ${ptgPercentage}%<br>
+                        <strong>% Online Learning Materials:</strong> ${onlineMaterialsPercentage}%<br>
+                        <strong>% Online Learning Activities:</strong> ${onlineActivitiesPercentage}%<br>
+                        <strong>% Online Assessments:</strong> ${onlineAssessmentsPercentage}%
+                    </div>
+                </div>
+            `;
         });
     </script>
 
