@@ -289,9 +289,6 @@ th, td {
                 <td>
                     <label class="label-small label-activity">Activity Type:</label>
                     <input type="text" name="week1_materials_onsite_type" class="activity-type-input" placeholder="Type of activity">
-        <datalist id="activity-type-options">
-            <option value="Classroom Lecture"></option>
-        </datalist>
                     <br>
                     <label>Delivery:</label>
                     <input type="number" name="week${week}_materials_onsite_delivery" placeholder="Hours">
@@ -302,12 +299,6 @@ th, td {
                 <td>
                     <label class="label-small label-activity">Activity Type:</label>
                     <input type="text" name="week1_materials_onsite_type" class="activity-type-input" placeholder="Type of activity">
-        <datalist id="activity-type-options">
-            <option value="Online Lecture"></option>
-            <option value="Recorded Lecture"></option>
-            <option value="YouTube"></option>
-            <option value="Website"></option>
-        </datalist>
                     <br>
                     <label>Delivery:</label>
                     <input type="number" name="week${week}_materials_online_delivery" placeholder="Hours">
@@ -454,41 +445,6 @@ th, td {
     <footer style="text-align: center; margin-top: 24px; font-size: 18px; color: blue;">
         Betul.... Ini Rohayati Paidi yang buat. 😊
     </footer>
-    <table>
-        <thead>
-            <!-- Add your table headers here -->
-        </thead>
-        <tbody id="week-rows">
-            <!-- JavaScript will dynamically generate rows here -->
-        </tbody>
-    </table>
-    
-    <script>
-        for (let week = 1; week <= 14; week++) {
-            const row = document.createElement('tr');
-            row.innerHTML = `
-                <td class="center">Week ${week}</td>
-                <td>
-                    <label class="label-small label-activity">Activity Type:</label>
-                    <input type="text" name="week${week}_materials_onsite_type" class="activity-type-input" list="activity-type-options" placeholder="Type of activity">
-                    <datalist id="activity-type-options">
-                        <option value="Lecture"></option>
-                        <option value="Group Discussion"></option>
-                        <option value="YouTube"></option>
-                        <option value="Workshop"></option>
-                        <option value="Online Quiz"></option>
-                    </datalist>
-                    <br>
-                    <label class="label-small label-delivery">Delivery:</label>
-                    <input type="number" name="week${week}_materials_onsite_delivery" placeholder="Hours">
-                    <br>
-                    <label class="label-small label-preparation">Preparation:</label>
-                    <input type="number" name="week${week}_materials_onsite_preparation" placeholder="Hours">
-                </td>
-                <!-- Repeat for other columns -->
-            `;
-            document.getElementById('week-rows').appendChild(row);
-        }
-    </script>
+
 </body>
 </html>
