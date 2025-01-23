@@ -163,14 +163,12 @@ th, td {
 .activity-type-input::placeholder {
     color: blue; /* Match text color for placeholders */
 }
-    /* Change background color for the Online (PTG) column */
-    td:nth-child(3), th:nth-child(3) {
-        background-color: pink; /* Set the background color to pink */
-    }
-
-    /* Optional: Make the text easier to read on a pink background */
-    td:nth-child(3), th:nth-child(3) {
-        color: black; /* Ensure text color is readable */
+    /* Target the Online (PTG) inputs specifically */
+td:nth-child(3) input[type="text"], 
+td:nth-child(3) input[type="number"] {
+    background-color: pink; /* Set the background color to pink */
+    color: black; /* Ensure the text is readable on pink background */
+    border-color: pink; /* Match the border color */
     }
     </style>
 </head>
