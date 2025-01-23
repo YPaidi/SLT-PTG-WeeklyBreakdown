@@ -141,35 +141,31 @@ th, td {
         color: red; /* Red for Preparation */
     }
 
-    /* Style for Activity Type input field */
-    .activity-type-input {
-        border: 1px solid blue; /* Blue border */
-        color: blue;           /* Blue text */
-        padding: 5px;          /* Add some padding for better appearance */
-        border-radius: 4px;    /* Rounded corners for a modern look */
-        width: 90%;            /* Adjust width as needed */
-    }
-    .activity-type-input::placeholder {
-        color: lightblue;      /* Placeholder color */
-    }
-.activity-type-input {
-    color: blue;
-    background-color: lightblue; /* Optional */
+/* Style for Physical (Activity Type) input field */
+td:nth-child(2) .activity-type-input {
+    background-color: lightblue; /* Blue background for Physical */
+    color: blue; /* Blue text */
     border: 1px solid blue;
-    padding: 5px;
-    border-radius: 4px;
 }
 
-.activity-type-input::placeholder {
-    color: blue; /* Match text color for placeholders */
+/* Style for Online (Activity Type) input field */
+td:nth-child(3) .activity-type-input {
+    background-color: pink; /* Pink background for Online */
+    color: black; /* Black text for better readability */
+    border: 1px solid pink;
 }
-    /* Target the Online (PTG) inputs specifically */
-td:nth-child(3) input[type="text"], 
-td:nth-child(3) input[type="number"] {
-    background-color: pink; /* Set the background color to pink */
-    color: black; /* Ensure the text is readable on pink background */
-    border-color: pink; /* Match the border color */
-    }
+
+/* General Activity Type input styling */
+.activity-type-input {
+    padding: 5px;          /* Add some padding for better appearance */
+    border-radius: 4px;    /* Rounded corners for a modern look */
+    width: 90%;            /* Adjust width as needed */
+}
+
+/* Placeholder styling */
+.activity-type-input::placeholder {
+    color: gray; /* Placeholder color to distinguish from text */
+}
     </style>
 </head>
 <body>
