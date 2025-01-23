@@ -422,9 +422,17 @@ document.getElementById('download-csv').addEventListener('click', function() {
     // Convert table rows to CSV format
     let csv = "";
     const rows = table.querySelectorAll('tr');
+
     rows.forEach(row => {
         const cols = row.querySelectorAll('td, th');
-        const rowData = Array.from(cols).map(col => `"${col.innerText}"`).join(",");
+        const rowData = Array.from(cols).map(col => {
+            // Check if the column contains an input field
+            const input = col.querySelector('input');
+            if (input) {
+                return `"${input.value || input.placeholder}"`; // Get the input value or placeholder
+            }
+            return `"${col.innerText.trim()}"`; // Otherwise, get the cell text
+        }).join(",");
         csv += rowData + "\n";
     });
 
