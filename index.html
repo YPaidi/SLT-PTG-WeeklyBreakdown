@@ -427,11 +427,11 @@ document.getElementById('download-csv').addEventListener('click', function () {
     rows.forEach((row, index) => {
         const cols = row.querySelectorAll('th, td'); // Include both headers and data cells
         const rowData = Array.from(cols).map(col => {
-            // Check for multiple input fields in a single <td>
+            // Check for input fields
             const inputs = col.querySelectorAll('input');
             if (inputs.length > 0) {
-                // Concatenate values of all inputs in this <td>
-                return Array.from(inputs).map(input => input.value || '').join(" | "); // Separate values with a " | "
+                // Return each input value as a separate column
+                return Array.from(inputs).map(input => input.value || '').join(",");
             } else {
                 return `"${col.innerText.trim()}"`; // Use the visible text in the cell
             }
