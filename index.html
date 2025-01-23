@@ -145,14 +145,14 @@ th, td {
 td:nth-child(2) .activity-type-input {
     background-color: lightblue; /* Blue background for Physical */
     color: blue; /* Blue text */
-    border: 1px solid blue;
+    border: none;
 }
 
 /* Style for Online (Activity Type) input field */
 td:nth-child(3) .activity-type-input {
     background-color: pink; /* Pink background for Online */
     color: black; /* Black text for better readability */
-    border: 1px solid pink;
+    border: none;
 }
 
 /* General Activity Type input styling */
@@ -310,8 +310,8 @@ td:nth-child(3) .activity-type-input {
                     <input type="number" name="week${week}_materials_online_preparation" placeholder="Hours">
                 </td>
                 <td>
-                    <label>Activity Type:</label>
-                    <input type="text" name="week${week}_materials_onsite_type" placeholder="Type of activity">
+                    <label class="label-small label-activity">Activity Type:</label>
+                    <input type="text" name="week${week}_materials_onsite_type" class="activity-type-input" placeholder="Type of activity">
                     <br>
                     <label>Delivery:</label>
                     <input type="number" name="week${week}_activities_onsite_delivery" placeholder="Hours">
@@ -320,8 +320,8 @@ td:nth-child(3) .activity-type-input {
                     <input type="number" name="week${week}_activities_onsite_preparation" placeholder="Hours">
                 </td>
                 <td>
-                    <label>Activity Type:</label>
-                    <input type="text" name="week${week}_materials_onsite_type" placeholder="Type of activity">
+                    <label class="label-small label-activity">Activity Type:</label>
+                    <input type="text" name="week${week}_materials_onsite_type" class="activity-type-input" placeholder="Type of activity">
                     <br>
                     <label>Delivery:</label>
                     <input type="number" name="week${week}_activities_online_delivery" placeholder="Hours">
