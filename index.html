@@ -446,6 +446,12 @@ document.getElementById('download-csv').addEventListener('click', function () {
     const rows = document.querySelectorAll("tbody tr");
     rows.forEach(row => {
         const cols = row.querySelectorAll("td");
+
+        // Skip rows with summary data (based on row index or specific text pattern)
+        if (Array.from(cols).some(col => col.innerText.trim() === "Learning Materials" || col.innerText.trim() === "Learning Activities" || col.innerText.trim() === "Assessments")) {
+            return; // Skip these rows
+        }
+
         const rowData = Array.from(cols).map(col => {
             // Collect all inputs within the cell
             const inputs = col.querySelectorAll("input");
@@ -456,8 +462,8 @@ document.getElementById('download-csv').addEventListener('click', function () {
             }
         });
 
-        // Add row to CSV (including empty rows)
-        csv += rowData.join(",") + "\n"; // Add row data to CSV
+        // Add row to CSV
+        csv += rowData.join(",") + "\n";
     });
 
     // Add a section for the Summary Table
