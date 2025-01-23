@@ -407,6 +407,35 @@ td:nth-child(7) .activity-type-input {
             `;
         });
     </script>
+<script>
+document.getElementById('download-csv').addEventListener('click', function() {
+    // Get the table element
+    const table = document.querySelector('table');
+
+    // Convert table rows to CSV format
+    let csv = "";
+    const rows = table.querySelectorAll('tr');
+    rows.forEach(row => {
+        const cols = row.querySelectorAll('td, th');
+        const rowData = Array.from(cols).map(col => `"${col.innerText}"`).join(",");
+        csv += rowData + "\n";
+    });
+
+    // Create a downloadable blob
+    const blob = new Blob([csv], { type: 'text/csv' });
+    const url = URL.createObjectURL(blob);
+
+    // Create a temporary link element to trigger the download
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = "table_data.csv";
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+});
+</script>
+
+<button id="download-csv" class="submit-btn">Download as CSV</button>
 
     <footer style="text-align: center; margin-top: 24px; font-size: 18px; color: blue;">
         Betul.... Ini Rohayati Paidi yang buat. 😊
