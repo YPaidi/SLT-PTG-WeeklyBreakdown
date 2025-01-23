@@ -450,8 +450,7 @@ document.getElementById('download-csv').addEventListener('click', function () {
             // Collect all inputs within the cell
             const inputs = col.querySelectorAll("input");
             if (inputs.length > 0) {
-                // Concatenate input values within the same column
-                return Array.from(inputs).map(input => input.value || "").join(" | ");
+                return Array.from(inputs).map(input => input.value || "").join(" | "); // Combine inputs with a separator
             } else {
                 return `"${col.innerText.trim()}"`; // Use visible text if no inputs
             }
@@ -478,7 +477,9 @@ document.getElementById('download-csv').addEventListener('click', function () {
     if (courseOverview) {
         csv += "\nCourse Overview\n";
         courseOverview.innerText.split("\n").forEach(line => {
-            csv += `"${line.trim()}"\n`;
+            if (line.trim() !== "") {
+                csv += `"${line.trim()}"\n`;
+            }
         });
     }
 
