@@ -416,21 +416,21 @@ td:nth-child(7) .activity-type-input {
 
 <script>
 document.getElementById('download-csv').addEventListener('click', function () {
-    // Define custom headers to ensure proper alignment
+    // Define headers for the main table
     const headers = [
         "Week",
-        "Learning Materials Physical (Activity Type)",
-        "Learning Materials Physical (Delivery)",
-        "Learning Materials Physical (Preparation)",
-        "Learning Materials Online (Activity Type)",
-        "Learning Materials Online (Delivery)",
-        "Learning Materials Online (Preparation)",
-        "Learning Activities Physical (Activity Type)",
-        "Learning Activities Physical (Delivery)",
-        "Learning Activities Physical (Preparation)",
-        "Learning Activities Online (Activity Type)",
-        "Learning Activities Online (Delivery)",
-        "Learning Activities Online (Preparation)",
+        "Materials Physical (Activity Type)",
+        "Materials Physical (Delivery)",
+        "Materials Physical (Preparation)",
+        "Materials Online (Activity Type)",
+        "Materials Online (Delivery)",
+        "Materials Online (Preparation)",
+        "Activities Physical (Activity Type)",
+        "Activities Physical (Delivery)",
+        "Activities Physical (Preparation)",
+        "Activities Online (Activity Type)",
+        "Activities Online (Delivery)",
+        "Activities Online (Preparation)",
         "Assessment Physical (Activity Type)",
         "Assessment Physical (Delivery)",
         "Assessment Physical (Preparation)",
@@ -439,10 +439,10 @@ document.getElementById('download-csv').addEventListener('click', function () {
         "Assessment Online (Preparation)"
     ];
 
-    // Start CSV content with headers
-    let csv = headers.join(",") + "\n";
+    // Start CSV content with headers for the main table
+    let csv = "Main Table\n" + headers.join(",") + "\n";
 
-    // Process table rows
+    // Process main table rows
     const rows = document.querySelectorAll("tbody tr");
     rows.forEach(row => {
         const cols = row.querySelectorAll("td");
@@ -450,13 +450,37 @@ document.getElementById('download-csv').addEventListener('click', function () {
             // Collect all inputs within the cell
             const inputs = col.querySelectorAll("input");
             if (inputs.length > 0) {
-                return Array.from(inputs).map(input => input.value || "").join(","); // Separate values within a cell
+                // Concatenate input values within the same column
+                return Array.from(inputs).map(input => input.value || "").join(" | ");
             } else {
                 return `"${col.innerText.trim()}"`; // Use visible text if no inputs
             }
-        }).join(","); // Join columns for the row
-        csv += rowData + "\n"; // Add row data to CSV
+        });
+
+        // Add row to CSV (including empty rows)
+        csv += rowData.join(",") + "\n"; // Add row data to CSV
     });
+
+    // Add a section for the Summary Table
+    const summaryHeaders = ["Category", "Physical", "Online", "Total"];
+    csv += "\nSummary Table\n" + summaryHeaders.join(",") + "\n";
+
+    // Process the Summary Table rows
+    const summaryRows = document.querySelectorAll("#summary-table tbody tr");
+    summaryRows.forEach(row => {
+        const cols = row.querySelectorAll("td");
+        const rowData = Array.from(cols).map(col => `"${col.innerText.trim()}"`);
+        csv += rowData.join(",") + "\n";
+    });
+
+    // Add Course Overview section
+    const courseOverview = document.querySelector("#totals .summary-content");
+    if (courseOverview) {
+        csv += "\nCourse Overview\n";
+        courseOverview.innerText.split("\n").forEach(line => {
+            csv += `"${line.trim()}"\n`;
+        });
+    }
 
     // Create a downloadable blob
     const blob = new Blob([csv], { type: "text/csv" });
@@ -465,7 +489,7 @@ document.getElementById('download-csv').addEventListener('click', function () {
     // Trigger download
     const a = document.createElement("a");
     a.href = url;
-    a.download = "table_data.csv"; // File name for the downloaded CSV
+    a.download = "table_data_with_summary.csv"; // File name for the downloaded CSV
     document.body.appendChild(a);
     a.click();
     document.body.removeChild(a);
