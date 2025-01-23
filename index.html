@@ -447,22 +447,23 @@ document.getElementById('download-csv').addEventListener('click', function () {
     rows.forEach(row => {
         const cols = row.querySelectorAll("td");
 
-        // Skip rows with summary data (based on row index or specific text pattern)
+        // Skip rows with summary data (optional logic for specific cases)
         if (Array.from(cols).some(col => col.innerText.trim() === "Learning Materials" || col.innerText.trim() === "Learning Activities" || col.innerText.trim() === "Assessments")) {
             return; // Skip these rows
         }
 
-        const rowData = Array.from(cols).map(col => {
+        const rowData = Array.from(cols).flatMap(col => {
             // Collect all inputs within the cell
             const inputs = col.querySelectorAll("input");
             if (inputs.length > 0) {
-                return Array.from(inputs).map(input => input.value || "").join(" | "); // Combine inputs with a separator
+                // Return individual input values as separate columns
+                return Array.from(inputs).map(input => input.value || "");
             } else {
-                return `"${col.innerText.trim()}"`; // Use visible text if no inputs
+                return [`"${col.innerText.trim()}"`]; // Use visible text if no inputs
             }
         });
 
-        // Add row to CSV
+        // Add row to CSV (including empty rows)
         csv += rowData.join(",") + "\n";
     });
 
