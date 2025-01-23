@@ -422,20 +422,24 @@ document.getElementById('download-csv').addEventListener('click', function () {
     // Initialize CSV content
     let csv = "";
 
-    // Loop through all rows
-    const rows = table.querySelectorAll('tr');
-    rows.forEach((row, index) => {
-        const cols = row.querySelectorAll('th, td'); // Include both headers and data cells
+    // Process headers (first row of the table)
+    const headers = table.querySelectorAll('thead th'); // Select header cells
+    const headerRow = Array.from(headers).map(header => `"${header.innerText.trim()}"`).join(",");
+    csv += headerRow + "\n"; // Add header row to CSV
+
+    // Process table rows
+    const rows = table.querySelectorAll('tbody tr');
+    rows.forEach(row => {
+        const cols = row.querySelectorAll('td');
         const rowData = Array.from(cols).map(col => {
-            // Check for input fields
+            // Check for multiple inputs in a single <td>
             const inputs = col.querySelectorAll('input');
             if (inputs.length > 0) {
-                // Return each input value as a separate column
-                return Array.from(inputs).map(input => input.value || '').join(",");
+                return Array.from(inputs).map(input => input.value || '').join(","); // Concatenate all input values
             } else {
-                return `"${col.innerText.trim()}"`; // Use the visible text in the cell
+                return `"${col.innerText.trim()}"`; // Use the visible text
             }
-        }).join(","); // Join columns with commas
+        }).join(","); // Join all columns
         csv += rowData + "\n"; // Add row to CSV
     });
 
