@@ -102,6 +102,27 @@ input[type="number"] {
     td:nth-of-type(6):before { content: "Assessment (Physical)"; }
     td:nth-of-type(7):before { content: "Assessment (Online)"; }
 }
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    table-layout: fixed; /* Ensure all columns have equal width */
+}
+
+thead th:first-child, tbody td:first-child {
+    width: 10%; /* Adjust this value as needed for the Week column */
+}
+
+thead th, tbody td {
+    width: auto; /* Distribute the remaining width evenly among other columns */
+}
+
+th, td {
+    border: 1px solid black;
+    padding: 5px;
+    text-align: center;
+    word-wrap: break-word; /* Ensure content wraps if it exceeds column width */
+}
     </style>
 </head>
 <body>
