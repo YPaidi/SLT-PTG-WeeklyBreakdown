@@ -4,169 +4,167 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weekly Breakdown of SLT and PTG</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-bottom: 20px;
-        }
-        table, th, td {
-            border: 1px solid black;
-        }
-        th, td {
-            padding: 5px;
-            text-align: center;
-        }
-        .center {
-            text-align: center;
-        }
-        .submit-btn {
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            cursor: pointer;
-            font-size: 16px;
-        }
-        .submit-btn:hover {
-            background-color: #45a049;
-        }
-        .totals {
-            font-size: 18px;
-            font-weight: bold;
-            margin-top: 20px;
-        }
-        .summary-card {
-            border: 1px solid #ccc;
-            border-radius: 10px;
-            padding: 20px;
-            margin: 20px 0;
-            background-color: #f9f9f9;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        .summary-title {
-            font-size: 20px;
-            font-weight: bold;
-            margin-bottom: 10px;
-            color: #333;
-        }
-
-        .summary-content {
-            font-size: 16px;
-            line-height: 1.6;
-            color: #555;
-        }
-
-        .wide-input {
-            width: 500px;
-        }
-input[type="number"] {
-    width: 60px;
-    padding: 5px;
-    font-size: 14px;
-}
-@media (max-width: 768px) {
-    table, thead, tbody, th, td, tr {
-        display: block;
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
     }
-    thead tr {
-        position: absolute;
-        top: -9999px;
-        left: -9999px;
-    }
-    tr {
-        margin-bottom: 1rem;
-    }
-    td {
-        position: relative;
-        padding-left: 50%;
-    }
-    td:before {
-        position: absolute;
-        top: 0;
-        left: 10px;
-        width: 45%;
-        padding-right: 10px;
-        white-space: nowrap;
-    }
-    td:nth-of-type(1):before { content: "Week"; }
-    td:nth-of-type(2):before { content: "Materials (Physical)"; }
-    td:nth-of-type(3):before { content: "Materials (Online)"; }
-    td:nth-of-type(4):before { content: "Activities (Physical)"; }
-    td:nth-of-type(5):before { content: "Activities (Online)"; }
-    td:nth-of-type(6):before { content: "Assessment (Physical)"; }
-    td:nth-of-type(7):before { content: "Assessment (Online)"; }
-}
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-bottom: 20px;
-    table-layout: fixed; /* Ensure all columns have equal width */
-}
 
-thead th:first-child, tbody td:first-child {
-    width: 10%; /* Adjust this value as needed for the Week column */
-}
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 20px;
+        table-layout: fixed; /* Ensure all columns have equal width */
+    }
 
-thead th, tbody td {
-    width: auto; /* Distribute the remaining width evenly among other columns */
-}
+    table, th, td {
+        border: 1px solid black;
+    }
 
-th, td {
-    border: 1px solid black;
-    padding: 5px;
-    text-align: center;
-    word-wrap: break-word; /* Ensure content wraps if it exceeds column width */
-}
-    /* Style for smaller font sizes */
-    .label-small {
+    th, td {
+        padding: 5px;
+        text-align: center;
+        word-wrap: break-word; /* Ensure content wraps if it exceeds column width */
+    }
+
+    .center {
+        text-align: center;
+    }
+
+    .submit-btn {
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+
+    .submit-btn:hover {
+        background-color: #45a049;
+    }
+
+    .totals {
+        font-size: 18px;
+        font-weight: bold;
+        margin-top: 20px;
+    }
+
+    .summary-card {
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        padding: 20px;
+        margin: 20px 0;
+        background-color: #f9f9f9;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .summary-title {
+        font-size: 20px;
+        font-weight: bold;
+        margin-bottom: 10px;
+        color: #333;
+    }
+
+    .summary-content {
+        font-size: 16px;
+        line-height: 1.6;
+        color: #555;
+    }
+
+    .wide-input {
+        width: 500px;
+    }
+
+    input[type="number"] {
+        width: 60px;
+        padding: 5px;
+        font-size: 14px;
+    }
+
+    @media (max-width: 768px) {
+        table, thead, tbody, th, td, tr {
+            display: block;
+        }
+
+        thead tr {
+            position: absolute;
+            top: -9999px;
+            left: -9999px;
+        }
+
+        tr {
+            margin-bottom: 1rem;
+        }
+
+        td {
+            position: relative;
+            padding-left: 50%;
+        }
+
+        td:before {
+            position: absolute;
+            top: 0;
+            left: 10px;
+            width: 45%;
+            padding-right: 10px;
+            white-space: nowrap;
+        }
+
+        td:nth-of-type(1):before { content: "Week"; }
+        td:nth-of-type(2):before { content: "Materials (Physical)"; }
+        td:nth-of-type(3):before { content: "Materials (Online)"; }
+        td:nth-of-type(4):before { content: "Activities (Physical)"; }
+        td:nth-of-type(5):before { content: "Activities (Online)"; }
+        td:nth-of-type(6):before { content: "Assessment (Physical)"; }
+        td:nth-of-type(7):before { content: "Assessment (Online)"; }
+    }
+
+    /* Style for Activity Type input under Physical columns */
+    td:nth-child(2) .activity-type-input, 
+    td:nth-child(4) .activity-type-input, 
+    td:nth-child(6) .activity-type-input {
+        background-color: lightblue; /* Light blue background for Physical input */
+        color: blue; /* Blue text */
+        border: none;
+        padding: 5px;
+        border-radius: 4px; /* Rounded corners */
+        width: 90%;
+    }
+
+    /* Style for Activity Type input under Online columns */
+    td:nth-child(3) .activity-type-input, 
+    td:nth-child(5) .activity-type-input, 
+    td:nth-child(7) .activity-type-input {
+        background-color: lightpink; /* Light pink background for Online input */
+        color: black; /* Black text for readability */
+        border: none;
+        padding: 5px;
+        border-radius: 4px; /* Rounded corners */
+        width: 90%;
+    }
+
+    /* Style for "Activity Type" label under Physical columns */
+    td:nth-child(2) .label-activity, 
+    td:nth-child(4) .label-activity, 
+    td:nth-child(6) .label-activity {
+        color: blue; /* Blue text for Physical columns */
         font-size: 0.9em;
     }
 
-    /* Colors for labels */
-    .label-activity {
-        color: blue; /* Blue for Activity Type */
+    /* Style for "Activity Type" label under Online columns */
+    td:nth-child(3) .label-activity, 
+    td:nth-child(5) .label-activity, 
+    td:nth-child(7) .label-activity {
+        color: darkpink; /* Dark pink text for Online columns */
+        font-size: 0.9em;
     }
 
-    .label-delivery {
-        color: green; /* Green for Delivery */
+    /* General Placeholder Styling */
+    .activity-type-input::placeholder {
+        color: gray; /* Placeholder text color */
     }
-
-    .label-preparation {
-        color: red; /* Red for Preparation */
-    }
-
-/* Gaya untuk Physical di semua kolum */
-td:nth-child(2), td:nth-child(4), td:nth-child(6) .activity-type-input {
-    background-color: lightblue; 
-    color: blue; 
-    border: none;
-}
-
-/* Gaya untuk Online di semua kolum */
-td:nth-child(3), td:nth-child(5), td:nth-child(7) .activity-type-input {
-    background-color: pink; 
-    color: black; 
-    border: none;
-}
-
-/* General Activity Type input styling */
-.activity-type-input {
-    padding: 5px;          /* Add some padding for better appearance */
-    border-radius: 4px;    /* Rounded corners for a modern look */
-    width: 90%;            /* Adjust width as needed */
-}
-
-/* Placeholder styling */
-.activity-type-input::placeholder {
-    color: gray; /* Placeholder color to distinguish from text */
-}
-    </style>
+</style>
 </head>
 <body>
 
