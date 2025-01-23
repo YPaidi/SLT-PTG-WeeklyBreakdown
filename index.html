@@ -267,6 +267,18 @@ td:nth-child(7) .label-activity {
             const row = document.createElement('tr');
             row.innerHTML = `
                 <td class="center">Week ${week}</td>
+        <td>
+            <label class="label-small label-activity">Activity Type:</label>
+            <input type="text" name="week${week}_materials_onsite_type" class="activity-type-input" placeholder="Type of activity">
+        </td>
+        <td>
+            <label class="label-small label-activity">Activity Type:</label>
+            <input type="text" name="week${week}_materials_online_type" class="activity-type-input" placeholder="Type of activity">
+        </td>
+        <!-- Add other columns (Learning Activities, Assessment, etc.) similarly -->
+    `;
+    document.getElementById('week-rows').appendChild(row);
+}
                 <td>
                     <label>Activity Type:</label>
                     <input type="text" name="week${week}_materials_onsite_type" placeholder="Type of activity">
