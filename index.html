@@ -141,17 +141,17 @@ th, td {
         color: red; /* Red for Preparation */
     }
 
-/* Style for Physical (Activity Type) input field */
-td:nth-child(2) .activity-type-input {
-    background-color: lightblue; /* Blue background for Physical */
-    color: blue; /* Blue text */
+/* Gaya untuk Physical di semua kolum */
+td:nth-child(2), td:nth-child(4), td:nth-child(6) .activity-type-input {
+    background-color: lightblue; 
+    color: blue; 
     border: none;
 }
 
-/* Style for Online (Activity Type) input field */
-td:nth-child(3) .activity-type-input {
-    background-color: pink; /* Pink background for Online */
-    color: black; /* Black text for better readability */
+/* Gaya untuk Online di semua kolum */
+td:nth-child(3), td:nth-child(5), td:nth-child(7) .activity-type-input {
+    background-color: pink; 
+    color: black; 
     border: none;
 }
 
@@ -291,7 +291,7 @@ td:nth-child(3) .activity-type-input {
                 <td class="center">Week ${week}</td>
                 <td>
                     <label class="label-small label-activity">Activity Type:</label>
-                    <input type="text" name="week${week}_materials_onsite_type" class="activity-type-input" placeholder="Type of activity">
+                    <input type="text" name="week${week}_materials_onsite_type" class="activity-type-input physical-input" placeholder="Type of activity">
                     <br>
                     <label>Delivery:</label>
                     <input type="number" name="week${week}_materials_onsite_delivery" placeholder="Hours">
@@ -301,7 +301,7 @@ td:nth-child(3) .activity-type-input {
                 </td>
                 <td>
                     <label class="label-small label-activity">Activity Type:</label>
-                    <input type="text" name="week${week}_materials_onsite_type" class="activity-type-input" placeholder="Type of activity">
+                    <input type="text" name="week${week}_materials_onsite_type" class="activity-type-input online-input" placeholder="Type of activity">
                     <br>
                     <label>Delivery:</label>
                     <input type="number" name="week${week}_materials_online_delivery" placeholder="Hours">
@@ -311,7 +311,7 @@ td:nth-child(3) .activity-type-input {
                 </td>
                 <td>
                     <label class="label-small label-activity">Activity Type:</label>
-                    <input type="text" name="week${week}_materials_onsite_type" class="activity-type-input" placeholder="Type of activity">
+                    <input type="text" name="week${week}_materials_onsite_type" class="activity-type-input physical-input" placeholder="Type of activity">
                     <br>
                     <label>Delivery:</label>
                     <input type="number" name="week${week}_activities_onsite_delivery" placeholder="Hours">
@@ -321,7 +321,7 @@ td:nth-child(3) .activity-type-input {
                 </td>
                 <td>
                     <label class="label-small label-activity">Activity Type:</label>
-                    <input type="text" name="week${week}_materials_onsite_type" class="activity-type-input" placeholder="Type of activity">
+                    <input type="text" name="week${week}_materials_onsite_type" class="activity-type-input online-input"  placeholder="Type of activity">
                     <br>
                     <label>Delivery:</label>
                     <input type="number" name="week${week}_activities_online_delivery" placeholder="Hours">
@@ -330,8 +330,8 @@ td:nth-child(3) .activity-type-input {
                     <input type="number" name="week${week}_activities_online_preparation" placeholder="Hours">
                 </td>
                 <td>
-                    <label>Activity Type:</label>
-                    <input type="text" name="week${week}_materials_onsite_type" placeholder="Type of activity">
+                    <label class="label-small label-activity">Activity Type:</label>
+                    <input type="text" name="week${week}_materials_onsite_type" class="activity-type-input physical-input" placeholder="Type of activity">
                     <br>
                     <label>Delivery:</label>
                     <input type="number" name="week${week}_assessment_onsite_delivery" placeholder="Hours">
@@ -340,8 +340,8 @@ td:nth-child(3) .activity-type-input {
                     <input type="number" name="week${week}_assessment_onsite_preparation" placeholder="Hours">
                 </td>
                 <td>
-                    <label>Activity Type:</label>
-                    <input type="text" name="week${week}_materials_onsite_type" placeholder="Type of activity">
+                    <label class="label-small label-activity">Activity Type:</label>
+                    <input type="text" name="week${week}_materials_onsite_type" class="activity-type-input online-input" placeholder="Type of activity">
                     <br>
                     <label>Delivery:</label>
                     <input type="number" name="week${week}_assessment_online_delivery" placeholder="Hours">
