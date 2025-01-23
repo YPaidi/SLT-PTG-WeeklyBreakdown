@@ -289,6 +289,9 @@ th, td {
                 <td>
                     <label class="label-small label-activity">Activity Type:</label>
                     <input type="text" name="week1_materials_onsite_type" class="activity-type-input" placeholder="Type of activity">
+        <datalist id="activity-type-options">
+            <option value="Classroom Lecture"></option>
+        </datalist>
                     <br>
                     <label>Delivery:</label>
                     <input type="number" name="week${week}_materials_onsite_delivery" placeholder="Hours">
@@ -297,8 +300,14 @@ th, td {
                     <input type="number" name="week${week}_materials_onsite_preparation" placeholder="Hours">
                 </td>
                 <td>
-                    <label>Activity Type:</label>
-                    <input type="text" name="week1_materials_onsite_type" placeholder="Type of activity">
+                    <label class="label-small label-activity">Activity Type:</label>
+                    <input type="text" name="week1_materials_onsite_type" class="activity-type-input" placeholder="Type of activity">
+        <datalist id="activity-type-options">
+            <option value="Online Lecture"></option>
+            <option value="Recorded Lecture"></option>
+            <option value="YouTube"></option>
+            <option value="Website"></option>
+        </datalist>
                     <br>
                     <label>Delivery:</label>
                     <input type="number" name="week${week}_materials_online_delivery" placeholder="Hours">
