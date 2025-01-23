@@ -416,41 +416,56 @@ td:nth-child(7) .activity-type-input {
 
 <script>
 document.getElementById('download-csv').addEventListener('click', function () {
-    // Select the table
-    const table = document.querySelector('table');
+    // Define custom headers to ensure proper alignment
+    const headers = [
+        "Week",
+        "Learning Materials Physical (Activity Type)",
+        "Learning Materials Physical (Delivery)",
+        "Learning Materials Physical (Preparation)",
+        "Learning Materials Online (Activity Type)",
+        "Learning Materials Online (Delivery)",
+        "Learning Materials Online (Preparation)",
+        "Learning Activities Physical (Activity Type)",
+        "Learning Activities Physical (Delivery)",
+        "Learning Activities Physical (Preparation)",
+        "Learning Activities Online (Activity Type)",
+        "Learning Activities Online (Delivery)",
+        "Learning Activities Online (Preparation)",
+        "Assessment Physical (Activity Type)",
+        "Assessment Physical (Delivery)",
+        "Assessment Physical (Preparation)",
+        "Assessment Online (Activity Type)",
+        "Assessment Online (Delivery)",
+        "Assessment Online (Preparation)"
+    ];
 
-    // Initialize CSV content
-    let csv = "";
-
-    // Process headers (first row of the table)
-    const headers = table.querySelectorAll('thead th'); // Select header cells
-    const headerRow = Array.from(headers).map(header => `"${header.innerText.trim()}"`).join(",");
-    csv += headerRow + "\n"; // Add header row to CSV
+    // Start CSV content with headers
+    let csv = headers.join(",") + "\n";
 
     // Process table rows
-    const rows = table.querySelectorAll('tbody tr');
+    const rows = document.querySelectorAll("tbody tr");
     rows.forEach(row => {
-        const cols = row.querySelectorAll('td');
+        const cols = row.querySelectorAll("td");
         const rowData = Array.from(cols).map(col => {
-            // Check for multiple inputs in a single <td>
-            const inputs = col.querySelectorAll('input');
+            // Collect all inputs within the cell
+            const inputs = col.querySelectorAll("input");
             if (inputs.length > 0) {
-                return Array.from(inputs).map(input => input.value || '').join(","); // Concatenate all input values
+                return Array.from(inputs).map(input => input.value || "").join(","); // Separate values within a cell
             } else {
-                return `"${col.innerText.trim()}"`; // Use the visible text
+                return `"${col.innerText.trim()}"`; // Use visible text if no inputs
             }
-        }).join(","); // Join all columns
-        csv += rowData + "\n"; // Add row to CSV
+        }).join(","); // Join columns for the row
+        csv += rowData + "\n"; // Add row data to CSV
     });
 
     // Create a downloadable blob
-    const blob = new Blob([csv], { type: 'text/csv' });
+    const blob = new Blob([csv], { type: "text/csv" });
     const url = URL.createObjectURL(blob);
 
-    // Create a temporary download link
-    const a = document.createElement('a');
+    // Trigger download
+    const a = document.createElement("a");
     a.href = url;
-    a.download = "table_data.csv"; // File name
+    a.download = "table_data.csv"; // File name for the downloaded CSV
     document.body.appendChild(a);
     a.click();
     document.body.removeChild(a);
