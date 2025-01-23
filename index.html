@@ -427,12 +427,12 @@ document.getElementById('download-csv').addEventListener('click', function () {
     rows.forEach((row, index) => {
         const cols = row.querySelectorAll('td, th'); // Include both headers and data
         const rowData = Array.from(cols).map(col => {
-            // Check if the cell contains an input element
+            // Check for input fields
             const input = col.querySelector('input');
             if (input) {
-                return `"${input.value || input.placeholder}"`; // Use input value or placeholder
+                return `"${input.value || ''}"`; // Use input value or empty string if no value
             } else {
-                return `"${col.innerText.trim()}"`; // Otherwise, use cell text
+                return `"${col.innerText.trim()}"`; // Use cell text
             }
         }).join(","); // Join columns with commas
         csv += rowData + "\n"; // Add row to CSV
