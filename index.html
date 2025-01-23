@@ -120,65 +120,51 @@
         td:nth-of-type(7):before { content: "Assessment (Online)"; }
     }
 
-    /* Style for Activity Type input under Physical columns */
-    td:nth-child(2) .activity-type-input, 
-    td:nth-child(4) .activity-type-input, 
-    td:nth-child(6) .activity-type-input {
-        background-color: lightblue; /* Light blue background for Physical input */
-        color: blue; /* Blue text */
-        border: none;
-        padding: 5px;
-        border-radius: 4px; /* Rounded corners */
-        width: 90%;
-    }
-
-    /* Style for Activity Type input under Online columns */
-    td:nth-child(3) .activity-type-input, 
-    td:nth-child(5) .activity-type-input, 
-    td:nth-child(7) .activity-type-input {
-        background-color: lightpink; /* Light pink background for Online input */
-        color: black; /* Black text for readability */
-        border: none;
-        padding: 5px;
-        border-radius: 4px; /* Rounded corners */
-        width: 90%;
-    }
-
-    /* Style for "Activity Type" label under Physical columns */
-    td:nth-child(2) .label-activity, 
-    td:nth-child(4) .label-activity, 
-    td:nth-child(6) .label-activity {
-        color: blue; /* Blue text for Physical columns */
-        font-size: 0.9em;
-    }
-
-    /* Style for "Activity Type" label under Online columns */
-    td:nth-child(3) .label-activity, 
-    td:nth-child(5) .label-activity, 
-    td:nth-child(7) .label-activity {
-        color: darkpink; /* Dark pink text for Online columns */
-        font-size: 0.9em;
-    }
-
-    /* General Placeholder Styling */
-    .activity-type-input::placeholder {
-        color: gray; /* Placeholder text color */
-    }
-/* Style for the word "Activity Type" in Physical columns */
-td:nth-child(2) .label-activity, 
-td:nth-child(4) .label-activity, 
+/* Style for "Activity Type" label in Physical columns */
+td:nth-child(2) .label-activity,
+td:nth-child(4) .label-activity,
 td:nth-child(6) .label-activity {
     color: blue; /* Blue text for Physical columns */
-    font-weight: bold; /* Optional: Make it bold for better visibility */
+    font-weight: bold; /* Optional: Make the text bold */
 }
 
-/* Style for the word "Activity Type" in Online columns */
-td:nth-child(3) .label-activity, 
-td:nth-child(5) .label-activity, 
+/* Style for "Activity Type" label in Online columns */
+td:nth-child(3) .label-activity,
+td:nth-child(5) .label-activity,
 td:nth-child(7) .label-activity {
     color: pink; /* Pink text for Online columns */
-    font-weight: bold; /* Optional: Make it bold for better visibility */
+    font-weight: bold; /* Optional: Make the text bold */
 }
+
+/* Style for Activity Type input in Physical columns */
+td:nth-child(2) .activity-type-input,
+td:nth-child(4) .activity-type-input,
+td:nth-child(6) .activity-type-input {
+    background-color: lightblue; /* Light blue background for Physical inputs */
+    color: blue; /* Blue text for inputs */
+    border: none; /* Remove borders */
+    padding: 5px; /* Add padding for spacing */
+    border-radius: 4px; /* Rounded corners for better appearance */
+    width: 90%; /* Adjust width */
+}
+
+/* Style for Activity Type input in Online columns */
+td:nth-child(3) .activity-type-input,
+td:nth-child(5) .activity-type-input,
+td:nth-child(7) .activity-type-input {
+    background-color: lightpink; /* Light pink background for Online inputs */
+    color: black; /* Black text for inputs */
+    border: none; /* Remove borders */
+    padding: 5px; /* Add padding for spacing */
+    border-radius: 4px; /* Rounded corners for better appearance */
+    width: 90%; /* Adjust width */
+}
+
+/* Placeholder styling for all inputs */
+.activity-type-input::placeholder {
+    color: gray; /* Set placeholder color */
+}
+
 </style>
 </head>
 <body>
@@ -268,8 +254,8 @@ td:nth-child(7) .label-activity {
             row.innerHTML = `
                 <td class="center">Week ${week}</td>
                 <td>
-                    <label>Activity Type:</label>
-                    <input type="text" name="week${week}_materials_onsite_type" placeholder="Type of activity">
+                    <label class="label-small label-activity">Activity Type:</label>
+                    <input type="text" name="week${week}_materials_onsite_type" class="activity-type-input" placeholder="Type of activity">
                     <br>
                     <label>Delivery:</label>
                     <input type="number" name="week${week}_materials_onsite_delivery" placeholder="Hours">
@@ -278,8 +264,8 @@ td:nth-child(7) .label-activity {
                     <input type="number" name="week${week}_materials_onsite_preparation" placeholder="Hours">
                 </td>
                 <td>
-                    <label>Activity Type:</label>
-                    <input type="text" name="week${week}_materials_onsite_type" placeholder="Type of activity">
+                    <label class="label-small label-activity">Activity Type:</label>
+                    <input type="text" name="week${week}_materials_onsite_type" class="activity-type-input" placeholder="Type of activity">
                     <br>
                     <label>Delivery:</label>
                     <input type="number" name="week${week}_materials_online_delivery" placeholder="Hours">
