@@ -415,24 +415,27 @@ td:nth-child(7) .activity-type-input {
     </footer>
 
 <script>
-document.getElementById('download-csv').addEventListener('click', function() {
+document.getElementById('download-csv').addEventListener('click', function () {
     // Get the table element
     const table = document.querySelector('table');
 
-    // Convert table rows to CSV format
+    // Initialize CSV content
     let csv = "";
-    const rows = table.querySelectorAll('tr');
 
-    rows.forEach(row => {
-        const cols = row.querySelectorAll('td, th');
+    // Process table rows
+    const rows = table.querySelectorAll('tr');
+    rows.forEach((row, index) => {
+        const cols = row.querySelectorAll('td, th'); // Include both headers and data
         const rowData = Array.from(cols).map(col => {
-            // Check if the column contains an input field
+            // Check for input fields and get their values or placeholders
             const input = col.querySelector('input');
             if (input) {
-                return `"${input.value || input.placeholder}"`; // Get the input value or placeholder
+                return `"${input.value || input.placeholder}"`; // Include user-entered data or placeholder
             }
-            return `"${col.innerText.trim()}"`; // Otherwise, get the cell text
+            return `"${col.innerText.trim()}"`; // Otherwise, include the cell text
         }).join(",");
+
+        // Add the row to the CSV string
         csv += rowData + "\n";
     });
 
@@ -443,7 +446,7 @@ document.getElementById('download-csv').addEventListener('click', function() {
     // Create a temporary link element to trigger the download
     const a = document.createElement('a');
     a.href = url;
-    a.download = "table_data.csv";
+    a.download = "table_data.csv"; // File name for the downloaded CSV
     document.body.appendChild(a);
     a.click();
     document.body.removeChild(a);
